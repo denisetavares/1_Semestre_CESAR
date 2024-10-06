@@ -1,0 +1,611 @@
+/* Reset básico e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FF6600; /* Laranja CESAR */
+    color: #fff;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo-cesar {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333; /* Cinza escuro */
+}
+
+/* Hero Section com foto e texto */
+.hero-section {
+    background-color: #e0e0e0; /* Bloco cinza */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    max-width: 1200px;
+    width: 100%;
+}
+
+.foto-denise {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o texto da hero section */
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #E65C00;
+}
+
+/* Sublinhado laranja inclinado e com efeito */
+.highlight {
+    position: relative;
+    font-weight: bold;
+    color: #333;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 4px; /* Altura do sublinhado */
+    width: 100%; /* Largura total */
+    background-color: #FF6600; /* Cor laranja */
+    transform: scaleX(0) skewX(-20deg); /* Inclinação e inicialmente invisível */
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 0.5s ease; /* Efeito de animação */
+}
+
+.highlight:hover::after {
+    transform: scaleX(1) skewX(-20deg); /* Mostra o sublinhado com inclinação */
+}
+
+/* Empresas e Universidades*/
+.companies {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.companies h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.logo-grid img {
+    width: 120px;
+    height: auto;
+    background: transparent;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.logo-grid img:hover {
+    filter: grayscale(0%);
+}
+
+
+/* Linha do Tempo */
+.timeline-section {
+    padding: 50px 20px;
+    background-color: #222; /* Fundo mais escuro */
+    position: relative;
+    color: #fff;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Linha do Tempo animada */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.timeline-event:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.timeline-event:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.timeline-event:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.timeline-event:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.timeline-event:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.timeline-event:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.timeline-date {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    background-color: #FF6600;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    padding: 15px 20px;
+     
+   color: #fffdfd;
+    border-radius: 10px;
+    
+}
+
+.logo-timeline {
+    width: 80px;
+    margin-top: 10px;
+}
+
+#organizeTimeline {
+    background-color: #FF6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Interesses Pessoais */
+
+.interest-block {
+    background-color: #fffcfc;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax {
+    background-image: url('img/family.jpg');
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.interest-block:hover {
+    transform: scale(1.05);
+    background-color: #FF6600;
+    color: white;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background-color: #FF6600;
+    width: 90%; /* Ajusta a largura para 80% da página */
+    margin: 30px auto; /* Centraliza o divider */
+}
+
+
+/* Animação para entrada da direita para a esquerda */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Aplicando a animação a cada bloco */
+.interest-block, .timeline-event {
+    opacity: 0; /* Inicialmente invisível */
+    animation: slideInRight 1s ease-out forwards;
+    margin-bottom: 20px;
+}
+
+/* Atraso para que cada bloco apareça em sequência */
+.interest-block:nth-child(1), .timeline-event:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.interest-block:nth-child(2), .timeline-event:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.interest-block:nth-child(3), .timeline-event:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.interest-block:nth-child(4), .timeline-event:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.interest-block:nth-child(5), .timeline-event:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.interest-block:nth-child(6), .timeline-event:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+/* Estilos para a seção "Sobre Mim" */
+.sobre-mim {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+
+/* Contêiner que organiza a foto e o texto com Flexbox */
+.sobre-mim-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilos para o contêiner da foto */
+.sobre-mim-photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centraliza a foto na metade da tela */
+}
+
+/* Estilos para a foto */
+.sobre-mim-photo {
+    max-width: 100%; /* A imagem ocupará todo o espaço disponível */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+/* Estilos para o texto */
+.sobre-mim-text {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.sobre-mim-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sobre-mim-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-mim-content {
+        flex-direction: column; /* Alinha a imagem e o texto em colunas */
+    }
+    .sobre-mim-photo-container, .sobre-mim-text {
+        width: 100%;
+    }
+}
+
+.sobre-mim-photo {
+    width: 100%; /* A imagem ocupará toda a largura do contêiner da foto */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar a imagem */
+}
+
+/* Estilos para o texto ocupando 50% */
+.sobre-mim-text {
+    width: 50%; /* O texto ocupa a outra metade */
+}
+
+.sobre-mim-text h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sobre-mim-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* Seção da Carreira */
+.career-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.career-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333; /* Laranja CESAR */
+}
+
+.career-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.career-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.career-item:hover {
+    background-color: #FF6600; /* Cor laranja ao passar o mouse */
+    color: white; /* Texto fica branco ao passar o mouse */
+}
+
+.year {
+    font-size: 18px;
+    font-weight: bold;
+    color:#333;
+    margin-right: 20px;
+}
+
+.details {
+    max-width: 600px;
+}
+
+.details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.details p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .career-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .year {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-mim-content {
+        flex-direction: column; /* Em telas menores, empilha a imagem e o texto */
+        align-items: center; /* Centraliza os elementos */
+    }
+
+    .sobre-mim-photo-container, .sobre-mim-text {
+        width: 100%; /* Em telas menores, os elementos ocupam toda a largura */
+    }
+
+    .sobre-mim-photo {
+        max-width: 80%; /* Ajusta o tamanho da imagem em telas menores */
+    }
+}
+
+
+
+/* Estilos para a seção de contato */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #FF6600; /* Laranja CESAR */
+}
+
+/* Estilos para a lista de informações de contato */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.info-block {
+    text-align: center;
+    width: 30%;
+}
+
+.info-block h2 {
+    font-size: 24px;
+    color: #FF6600; /* Laranja CESAR */
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilos para o mapa */
+.map-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.map-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #666; /* Alterado para um cinza mais claro */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centralizar o conteúdo */
+    padding: 20px 0; /* Espaçamento */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px; /* Espaçamento entre letras para um estilo mais elegante */
+}
+
+
+
+
