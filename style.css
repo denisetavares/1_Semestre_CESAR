@@ -536,6 +536,84 @@ nav ul li a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-cesar {
+        max-width: 100px;
+    }
+
+    .info-block {
+        min-width: 100%;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto-denise {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-cesar {
+        max-width: 100px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 0.9rem;
+    }
+
+    .logo-grid img {
+        max-width: 100px;
+    }
+}
 
 
 /* Estilos para a seção de contato */
